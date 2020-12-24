@@ -32,19 +32,23 @@ export const Column = styled.div`
     background-color: ${backgroundColor};
   `}
 
-  @media only screen and (max-width: 1200px) {
-    ${({ xlg }) => xlg && getGridWidth(xlg) }
+  @media only screen and (min-width: 0px) {
+    ${({ xsm }) => xsm && getGridWidth(xsm) }
   }
 
-  @media only screen and (max-width: 992px) {
-    ${({ lg }) => lg && getGridWidth(lg) }
+  @media only screen and (min-width: 576px) {
+    ${({ sm }) => sm && getGridWidth(sm) }
   }
 
-  @media only screen and (max-width: 768px) {
+  @media only screen and (min-width: 768px) {
     ${({ md }) => md && getGridWidth(md) }
   }
 
-  @media only screen and (max-width: 576px) {
-    ${({ sm }) => sm && getGridWidth(sm) }
+  @media only screen and (min-width: 992px) {
+    ${({ lg }) => lg && getGridWidth(lg) }
   }
+
+  @media only screen and (min-width: 1200px) {
+    ${({ xlg }) => xlg && getGridWidth(xlg) }
+  }  
 `
